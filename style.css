@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg-color: #f3f5fc;
+  --blue-dark: #0a3871;
+  --blue-opacity: #d8dfe8;
+  --copy: #343a40;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Inter';
+  min-height: 100vh;
+  font-size: 16px;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 80px;
+}
+main {
+  display: flex;
+  max-width: 990px;
+  margin: auto;
+  width: 90%;
+  /* background: #000; */
+  min-height: 90vh;
+  padding-top: 40px;
+}
+textarea {
+  resize: none;
+  font-family: 'Inter';
+}
+textarea:focus {
+  outline: none;
+}
+.section-input {
+  flex-basis: 70%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 140px;
+}
+.section-output {
+  flex-basis: 30%;
+  background-color: #fff;
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+.section-output-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.section-output-illustration {
+  width: 230px;
+}
+.empty-input {
+  padding-top: 140px;
+  color: var(--copy);
+  font-size: 13px;
+  /* font-weight: 300; */
+}
+.textarea-input {
+  background-color: var(--bg-color);
+  font-size: 24px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 15px;
+  color: var(--blue-dark);
+}
+
+.textarea-input::placeholder {
+  color: var(--blue-dark);
+  font-family: 'Inter';
+}
+.info-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.info-tooltip > span {
+  font-size: 12px;
+}
+
+.btn-box {
+  display: flex;
+  gap: 18px;
+}
+.btn-primary {
+  background-color: var(--blue-dark);
+  color: #fff;
+  width: 50%;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 18px;
+}
+.btn-secondary {
+  border: 1px solid var(--blue-dark);
+  border-radius: 18px;
+  background-color: transparent;
+  color: var(--blue-dark);
+  width: 50%;
+}
+
+.textarea-output {
+  border: none;
+  color: var(--blue-dark);
+  width: 100%;
+  height: 90%;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.btn-secondary.btn-copy {
+  width: 80%;
+  padding: 15px;
+  position: relative;
+  font-weight: 600;
+}
+
+/* .btn-copy::before {
+  content: 'Copied';
+  position: absolute;
+  top: 0;
+  background-color: var(--blue-dark);
+  color: #fff;
+  padding:6px 10px ;
+  border-radius: 40px;
+} */
+
+.btn-copy-clicked{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 13px;
+}
+.btn-copy-clicked svg{
+  width: 15px;
+  height: 100%;
+}
+
+@media (max-width: 720px) {
+  main{
+    flex-direction: column;
+    /* min-height: 100vh; */
+    margin-bottom: 50px;
+  }
+  .section-input {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+  .section-output {
+    margin-top: 40px;
+    flex-basis: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+  }
+  .empty-input{
+    padding-top: 50px;
+  }
+  .section-output-illustration {
+    display: none;
+  }
+}
